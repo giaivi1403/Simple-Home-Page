@@ -1,0 +1,20 @@
+-
+    const boxArr = [
+        '../../assets/images/picture.png',
+        '../../assets/images/airplane.png',
+        '../../assets/images/bulb.png',
+    ]
+
+.section-feature.pdt-100-respon
+    .section-feature__title.text-center.mb-5
+        span.small NEW DESIGN
+        h2.title Some awesone features
+    .section-feature__content
+        .container
+            .row
+                each item in boxArr
+                    .col-lg-4.col-md-4.col-12
+                        .section-feature__content-box.text-center
+                            img(src=item, alt="").mb-4
+                            h3.mb-3 Some awesone features
+                            p Donec sed odio dui. Aenean lacinia bibendum nulla sed consectet Donec sed odio dui. Aenean lacinia bibendum nulla sed consectet

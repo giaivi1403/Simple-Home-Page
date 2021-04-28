@@ -1,0 +1,30 @@
+.section-feature {
+    height: $height-2;
+    background-image: url(../images/section-feature.png);
+    background-size: cover;
+    background-position: center -60px;
+    background-repeat: no-repeat;
+    @include max-breakpoint(1024) {
+        height: auto;
+        background-position: center -20px;
+    }
+    @include max-breakpoint(425) {
+        background-image: none;
+        background-color: #f6f6f6;
+    }
+    &__title {
+        @include max-breakpoint(1024) {
+            margin-bottom: 20px !important;
+        }
+    }
+    &__content {
+        &-box {
+            img {
+                width: 68px;
+            }
+            h3 {
+                font-size: 22px;
+            }
+        }
+    }
+}

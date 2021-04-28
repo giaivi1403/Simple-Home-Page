@@ -1,0 +1,50 @@
+-
+    const footerInfo = [
+        {
+            title : 'Support',
+            item : ['Help Center', 'Get Started', 'Contact US']
+        },
+        {
+            title : 'About US',
+            item : ['About us', 'Terms of Use', 'Privacy Policy']
+        },
+    ]
+    const footerIcon = [
+        '../assets/images/dribbble.png',
+        '../assets/images/facebook.png',
+        '../assets/images/googleplus.png',
+        '../assets/images/twitter.png',
+
+    ]
+footer
+    .footer.pdy-100-respon
+        .container 
+            .row
+                .col-lg-4.col-md-4.col-12
+                    .footer__img.mb-1
+                        img(src="../assets/images/footer-logo.png", alt="")
+                    p.mb-2 
+                        | Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo qu
+                    p.mb-2 
+                        | USA & CAN: 1-888-123-4567
+                    p.mb-2
+                        | Address: 34 Brokel Rd. NY
+                each obj in footerInfo
+                    .col-lg-2.col-md-2.col-12
+                        h3.footer__title.mb-3=obj.title
+                        ul
+                            each i in obj.item
+                                li.mb-2
+                                    a(href="#" style='text-decoration:none')=i 
+                .col-lg-4.col-md-4.col-12
+                    h3.footer__title.mb-4 Get Newsletter 
+                    form(action='' method='POST' role='form').footer__form.mb-4
+                        .form-group.d-flex.position-relative 
+                            input.form-control(type='email' id='' placeholder='YOUR EMAIL')
+                            button.btn.btn-danger(type='submit')
+                                img(src="../assets/images/letter.png", alt="") 
+                    ul.footer__icon.d-flex.align-items-center.justify-content-between.w-50.mx-auto
+                        each item in footerIcon
+                            li
+                                img(src=item, alt='img')
+        .footer__rec

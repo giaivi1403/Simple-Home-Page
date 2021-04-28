@@ -1,0 +1,41 @@
+.header {
+    height: 815px;
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    background-position: center center;
+    h1 {
+        font-size: 60px;
+        font-weight: 200;
+        color: #282828;
+        width: 37%;
+        @include max-breakpoint(1024) {
+            width: 50%;
+        }
+        @include max-breakpoint(425) {
+            width: 100%;
+            font-size: 24px;
+        }
+    }
+    &__play {
+        background-color: #8084a2;
+        width: 60px;
+        height: 60px;
+        outline: none;
+        border: none;
+        border-radius: 100%;
+        i {
+            right: -2px;
+            color: #fff;
+        }
+    }
+    &__try {
+        padding: 10px 50px !important;
+        background-color: $primary-color;
+        outline: none;
+        border: none;
+    }
+    &__note {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

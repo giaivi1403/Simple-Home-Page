@@ -1,0 +1,29 @@
+.section-client {
+    background-image: url(../images/client-bg.png);
+    background-size: cover;
+    background-position: center center;
+    background-color: #333;
+    &__box {
+        &-img {
+            border: 1px solid #333;
+            img {
+                width: 77px;
+                height: 77px;
+            }
+        }
+        &-info {
+            h3 {
+                color: #fff;
+                font-size: 22px;
+            }
+        }
+    }
+    &__logo {
+        width: calc(100% / 5 - 80px);
+        margin: 0 30px;
+        @include max-breakpoint(425) {
+            width: calc(100% / 3 - 20px);
+            margin: 10px 5px;
+        }
+    }
+}

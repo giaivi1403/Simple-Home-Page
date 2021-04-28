@@ -1,0 +1,27 @@
+-
+    const clientLogo = [
+        '../assets/images/partner-logo-1.png',
+        '../assets/images/partner-logo-4.png',
+        '../assets/images/partner-logo-5.png',
+        '../assets/images/partner-logo-7.png',
+        '../assets/images/partner-logo-8.png',
+    ]
+
+.section-client.pdy-100-respon
+    .container
+        .row.mb-5
+            - for(let i = 0; i < 3; i++)
+                .col-lg-4.col-md-4.col-12
+                    .section-client__box.text-center
+                        .section-client__box-img.d-inline-block.mb-4
+                            img(src="../assets/images/client.png", alt="")
+                        .section-client__box-info.mb-4
+                            h3.title  Jonathon Doe
+                            span.small Co Founder
+                        p 
+                            i “Aenean eu leo quam. Pellentesque ornare sem lacinia quam venen “Aenean eu leo quam. Pellentesque ornare sem lacinia quam venen
+        .row
+            .col-12.text-center
+                each item in clientLogo
+                    .section-client__logo.d-inline-block
+                        img(src=item, alt="")

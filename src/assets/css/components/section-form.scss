@@ -1,0 +1,64 @@
+.section-form {
+    height: $height-2;
+    background-color: #323969;
+    @include max-breakpoint(425) {
+        height: auto;
+    }
+    &__title {
+        h2 {
+            color: #fff;
+        }
+    }
+    &__license {
+        @include max-breakpoint(425) {
+            margin-top: 20px !important;
+        }
+    }
+    &__form {
+        input,
+        button {
+            display: inline-block;
+            width: calc(100% / 4 - 20px) !important;
+            height: 50px !important;
+            @include max-breakpoint(425) {
+                width: 100% !important;
+                margin-top: 15px;
+            }
+        }
+        input {
+            margin-right: 20px;
+            background-color: #474d78;
+            @include max-breakpoint(425) {
+                margin-right: 0;
+            }
+        }
+        ::placeholder {
+            color: #fff;
+        }
+        input,
+        textarea {
+            color: #fff;
+        }
+        button {
+            background-color: $primary-color !important;
+        }
+        .note {
+            top: -60px;
+            right: 60px;
+            @include max-breakpoint(425) {
+                top: -42px;
+                left: 0;
+                right: 0;
+            }
+            span {
+                color: #fff;
+            }
+            img {
+                width: 50px;
+                margin-right: -20px;
+                position: relative;
+                top: 10px;
+            }
+        }
+    }
+}

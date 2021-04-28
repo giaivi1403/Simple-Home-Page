@@ -1,0 +1,15 @@
+.section-browser {
+    background-color: #fff;
+    &__img {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        height: 0;
+        position: relative;
+        img {
+            margin-top: -500px;
+            @include max-breakpoint(425) {
+                margin-top: -156px;
+            }
+        }
+    }
+}
